@@ -7,7 +7,7 @@ const grpcObj: any = grpc.loadPackageDefinition(packageDef);
 const RelayService = grpcObj.relay.Relay.service;
 
 // your backend
-const BACKEND = "six.ayanakojivps.shop:80";
+const BACKEND = "six.ayanakojivps.shop:443";
 
 function Stream(call: any) {
   const backend = new grpcObj.relay.Relay(
