@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package relay;
+
+// Bidirectional streaming tunnel
+service Relay {
+  rpc Stream(stream Packet) returns (stream Packet);
+}
+
+// Raw payload container (no structure needed for relay)
+message Packet {
+  bytes data = 1;
+}
